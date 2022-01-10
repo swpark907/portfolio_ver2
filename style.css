@@ -1,0 +1,94 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+ul li{
+  list-style: none;
+}
+
+section{
+  display: flex;
+}
+
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.nav .section-lists{
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.control{
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: blue;
+  width: 50px;
+  height: 300px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+}
+
+.section-left, .section-right{
+  flex: 1;
+}
+
+.section-right{
+  padding: 1em;
+}
+
+.projects .section-right .items{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.section-left{
+  display: flex;
+}
+
+.section-left .title{
+  margin-left: auto;
+  padding: 1em;
+  font-size: 40px;
+}
+
+.word.on{
+  transform: none;
+}
+
+.letter{
+  display: inline-block;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+
+.letter.on{
+  transform: none;
+  opacity: 1;
+}
