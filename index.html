@@ -1,35 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seungwoo Park</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <div class="nav">
-      <div class="title">PARK SEUNG WOO</div>
+  <header class='nav'>
+      <div class="nav-title">PARK SEUNG WOO</div>
       <ul class="section-lists">
-        <li class="section-list">ABOUT</li>
-        <li class="section-list">PROJECTS</li>
-        <li class="section-list">CONTACT</li>
+        <li class="section-list" data-link="#home">HOME</li>
+        <li class="section-list" data-link="#about">ABOUT</li>
+        <li class="section-list" data-link="#projects">PROJECTS</li>
+        <li class="section-list" data-link="#contact">CONTACT</li>
       </ul>
-    </div>
   </header>
-  <section class="hero-section">
 
-  </section>
-  <section class="about-me">
-    <div class="section-left"></div>
-  </section>
+  <div class="dot-container">
+    <ul class="dots">
+      <li class="dot active" data-link="#home">
+        <span class="dot-name">HOME</span>
+      </li>
+      <li class="dot" data-link="#about">
+        <span class="dot-name">ABOUT</span>
+      </li>
+      <li class="dot" data-link="#projects">
+        <span class="dot-name">PROJECTS</span>
+      </li>
+      <li class="dot" data-link="#contact">
+        <span class="dot-name">CONTACT</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <section class="home">
+
+    </section>
 
 
-  <section class="projects">
-    <div class="section-left"></div>
-  </section>
+
+    <section id="about">
+      <div class="section-left">
+        <h1 class="title word">ABOUT</h1>
+      </div>
+      <div class="section-right"></div>
+    </section>
 
 
-  <footer class="footer"></footer>
+    <section id="projects">
+      <div class="section-left">
+        <h1 class="title word">PROJECTS</h1>
+      </div>
+      <div class="section-right">
+        <ul class="items">
+          <li class="item">
+            <span class="project_number">1</span>
+          </li>
+          <li class="item">
+            <span class="project_number">2</span>
+          </li>
+          <li class="item">
+            <span class="project_number">3</span>
+          </li>
+          <li class="item">
+            <span class="project_number">4</span>
+          </li>
+        </ul>
+        <div class="project_preview">
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <footer id="contact"></footer>
+  <script src="index.js"></script>
+  <script src='dot.js'></script>
 </body>
+
 </html>

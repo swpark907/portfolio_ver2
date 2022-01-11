@@ -33,17 +33,51 @@ section{
 .nav .section-lists{
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 350px;
 }
 
-.control{
-  position: absolute;
+.dots{
+  position: fixed;
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: blue;
   width: 50px;
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dot{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  border: 3px solid blueviolet;
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: all 300ms linear;  
+}
+
+.dot.active{
+  background-color: blueviolet;
+  transform: scale(1.2);
+}
+
+.dots .dot .dot-name{
+  opacity: 0;
+  text-align: end;
+  position: relative;
+  left: -30px;
+  transform: translateY(-7px);
+  transition: all 250ms ease-in;
+}
+
+.dots .dot:hover .dot-name,
+.dots .dot.active .dot-name{
+  opacity: 1;
 }
 
 .container{
@@ -64,8 +98,6 @@ section{
   display: flex;
   justify-content: space-around;
 }
-
-
 
 .section-left{
   display: flex;

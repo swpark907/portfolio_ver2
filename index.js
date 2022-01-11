@@ -1,3 +1,5 @@
+'use strict'
+
 const words = document.querySelectorAll('.word');
 let currentWord = 0;
 
@@ -35,3 +37,4 @@ const addClassname = (arr, i) => {
 for(let i = 0; i < words.length; i++){
   splitLetters(words[i]);
 }
+
