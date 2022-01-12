@@ -3,8 +3,13 @@
 }
 
 body{
+  margin: 0;
   display: flex;
   justify-content: center;
+}
+
+h1, h2{
+  margin: 0;
 }
 
 ul{
@@ -18,9 +23,11 @@ ul li{
 
 section{
   display: flex;
+  height: 100vh;
+  border-bottom: solid 1px black;
 }
 
-.nav{
+nav{
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +37,7 @@ section{
   padding: 1.5rem;
 }
 
-.nav .section-lists{
+nav .section-lists{
   display: flex;
   justify-content: space-between;
   width: 350px;
@@ -38,7 +45,7 @@ section{
 
 .dots{
   position: fixed;
-  right: 30px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   width: 50px;
@@ -46,6 +53,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 1;
 }
 
 .dot{
@@ -53,7 +61,7 @@ section{
   position: relative;
   display: flex;
   justify-content: end;
-  border: 3px solid blueviolet;
+  border: 3px solid black;
   background-color: transparent;
   width: 15px;
   height: 15px;
@@ -62,7 +70,7 @@ section{
 }
 
 .dot.active{
-  background-color: blueviolet;
+  background-color: black;
   transform: scale(1.2);
 }
 
@@ -83,7 +91,7 @@ section{
 .container{
   display: flex;
   flex-direction: column;
-  width: 1280px;
+  width: 1320px;
 }
 
 .section-left, .section-right{
@@ -94,20 +102,78 @@ section{
   padding: 1em;
 }
 
-.projects .section-right .items{
-  display: flex;
-  justify-content: space-around;
-}
 
 .section-left{
+  position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 5em;  
+}
+
+.section-left::after{
+  content: '';
+  width: 100%;
+  height: 5px;
+  background-color: black;
 }
 
 .section-left .title{
   margin-left: auto;
-  padding: 1em;
-  font-size: 40px;
+  font-size: 110px;
 }
+
+.section-left .subtitle{
+  text-align: end;
+}
+
+#projects .section-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects .section-right .items{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#projects .section-right .project_preview{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+#projects .section-right .project_preview img{
+  width: 100%;
+  height: 100%;
+}
+
+#projects .section-right .project_preview .more{
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0.7em 1em;
+  transition: all 150ms linear;
+}
+
+#projects .section-right .project_preview .more:hover{
+  background-color: white;
+  color: black;
+}
+
 
 .word.on{
   transform: none;
@@ -123,4 +189,53 @@ section{
 .letter.on{
   transform: none;
   opacity: 1;
+}
+
+.cover{
+  display: none;
+  position: fixed;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);;
+}
+
+#projects .project_modal{
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+}
+
+#projects .project_modal .project_modal_container{
+  display: none;
+  background-color: white;
+  border-radius: 10px;
+  width: 70%;
+  padding: 2em;
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+#projects .project_modal.active .project_modal_container{
+  display: block;
+}
+
+#projects .project_modal.active{
+  display: block;
+}
+
+#projects .project_modal ion-icon{
+  color: black;
+  font-size: 35px;
+}
+#projects .project_modal ion-icon:hover{
+  color: rgb(161, 161, 161)
 }

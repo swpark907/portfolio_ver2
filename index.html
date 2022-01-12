@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class='nav'>
+  <nav>
       <div class="nav-title">PARK SEUNG WOO</div>
       <ul class="section-lists">
         <li class="section-list" data-link="#home">HOME</li>
@@ -18,7 +18,7 @@
         <li class="section-list" data-link="#projects">PROJECTS</li>
         <li class="section-list" data-link="#contact">CONTACT</li>
       </ul>
-  </header>
+  </nav>
 
   <div class="dot-container">
     <ul class="dots">
@@ -38,7 +38,7 @@
   </div>
 
   <div class="container">
-    <section class="home">
+    <section id="home">
 
     </section>
 
@@ -47,6 +47,7 @@
     <section id="about">
       <div class="section-left">
         <h1 class="title word">ABOUT</h1>
+        <h2 class="subtitle">Park Seung woo</h2>
       </div>
       <div class="section-right"></div>
     </section>
@@ -72,16 +73,33 @@
           </li>
         </ul>
         <div class="project_preview">
-
+          <img src="" alt="project_preview">
+          <button class="more">자세히 보기</button>
         </div>
+      </div>
+
+      <div class="project_modal">
+        <div class="project_modal_container">
+          <img class="project_modal_thumbnail" src="" alt="">
+          <h2 class="project_modal_title">프로젝트 제목(제목 직접)</h2>
+          <h3>개요</h3>
+          <p class="project_modal_outline">...</p>
+          <h3>사용기술</h3>
+          <p class="project_modal_skills">...</p>
+          <h3>코드 (Github)</h3>
+          <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+        </div>        
       </div>
     </section>
   </div>
 
 
   <footer id="contact"></footer>
-  <script src="index.js"></script>
+  <script src="letterAnimation.js"></script>
   <script src='dot.js'></script>
+  <script src='modal.js'></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
