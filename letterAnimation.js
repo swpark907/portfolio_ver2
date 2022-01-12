@@ -30,7 +30,6 @@ const displayLetters = (arr) => {
 const addClassname = (arr, i) => {
   setTimeout(() => {    
     arr[i].classList.add('on')
-    console.log(arr[i])
   }, 350+(i*80))
 }
 
