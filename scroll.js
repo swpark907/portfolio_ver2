@@ -6,5 +6,3 @@ window.addEventListener('scroll', (e) => {
   window.scrollY > 300 ? nav.classList.add('active') : nav.classList.remove('active');
 })
 
-console.log(aboutTitle.getBoundingClientRect())
-

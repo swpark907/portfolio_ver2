@@ -4,20 +4,21 @@ const dots = document.querySelector('.dots');
 const dot = document.querySelectorAll('.dot')
 const dotName = document.querySelectorAll('.dot-name')
 
-dots.addEventListener('click', (e) => {
-  if(e.target.className === 'dot'){
+dot.forEach((d) => {
+  d.addEventListener('click', (e) => {
     dot.forEach((d) => {
       d.classList.remove('active');
     })
-    e.target.classList.add('active');
-  }
+    d.classList.add('active');
+    const currentPage = document.querySelector(`${e.currentTarget.dataset.link}`) 
+    console.log(currentPage)
 
-  if(e.target.className === 'dot-name'){
-    dot.forEach((d) => {
-      d.classList.remove('active');
-    })
-    e.target.parentNode.classList.add('active');
-  }
+    const top = window.pageYOffset + currentPage.getBoundingClientRect().top;
+
+    window.scrollTo({top: top, behavior:'smooth'})
+    console.log(top)
+
+  })
 })
 
 
