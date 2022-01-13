@@ -8,8 +8,6 @@ let titleLetters = []
 const splitLetters = (word) => {
   const content = word.innerHTML;
   word.innerHTML = '';
-  
-  let letters = [];
 
   for(let i = 0; i < content.length; i++){
     let letter = document.createElement('span');
@@ -18,7 +16,6 @@ const splitLetters = (word) => {
     word.appendChild(letter);
     titleLetters.push(letter);
   }
-  displayLetters(titleLetters);
 }
 
 const displayLetters = (arr) => {
@@ -37,3 +34,15 @@ for(let i = 0; i < words.length; i++){
   splitLetters(words[i]);
 }
 
+window.addEventListener('scroll', (e) => {
+  for(let i = 0; i < words.length; i++){
+    if(window.scrollY > words[i].getBoundingClientRect().top - 200){
+      const spans = words[i].querySelectorAll('span');
+      const letters = [];
+      spans.forEach((span) => {
+        letters.push(span);
+      })
+      displayLetters(letters);
+    }
+  }
+})
