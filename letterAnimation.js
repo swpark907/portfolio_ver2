@@ -35,8 +35,10 @@ for(let i = 0; i < words.length; i++){
 }
 
 window.addEventListener('scroll', (e) => {
+  
   for(let i = 0; i < words.length; i++){
-    if(window.scrollY > words[i].getBoundingClientRect().top - 200){
+    const top = words[i].getBoundingClientRect().top ;
+    if(top < 900 && top > 0){
       const spans = words[i].querySelectorAll('span');
       const letters = [];
       spans.forEach((span) => {
