@@ -3,6 +3,7 @@
 const moreProject = document.querySelector('.more');
 const cover = document.querySelector('.cover');
 const projectModal = document.querySelector('.project_modal');
+const modalClose = document.querySelector('.project_modal_close');
 
 moreProject.onclick = showModal;
 
@@ -11,5 +12,5 @@ function showModal(e){
 }
 
 window.addEventListener('click', (e) => {
-  e.target === projectModal ? projectModal.classList.remove('active') : false;
+  e.target === projectModal || e.target === modalClose ? projectModal.classList.remove('active') : false;
 })

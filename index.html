@@ -10,10 +10,10 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="nav">
       <div class="nav-title">PARK SEUNG WOO</div>
       <ul class="section-lists">
-        <li class="section-list" data-link="#home">HOME</li>
+        <li class="section-list active" data-link="#home">HOME</li>
         <li class="section-list" data-link="#about">ABOUT</li>
         <li class="section-list" data-link="#projects">PROJECTS</li>
         <li class="section-list" data-link="#contact">CONTACT</li>
@@ -46,7 +46,7 @@
 
     <section id="about">
       <div class="section-left">
-        <h1 class="title word">ABOUT</h1>
+        <h1 class="title word" id="about-title">ABOUT</h1>
         <h2 class="subtitle">Park Seung woo</h2>
       </div>
       <div class="section-right"></div>
@@ -55,7 +55,7 @@
 
     <section id="projects">
       <div class="section-left">
-        <h1 class="title word">PROJECTS</h1>
+        <h1 class="title word" id="projects-title">PROJECTS</h1>
       </div>
       <div class="section-right">
         <ul class="items">
@@ -88,13 +88,18 @@
           <p class="project_modal_skills">...</p>
           <h3>코드 (Github)</h3>
           <a href="#"><ion-icon name="logo-github"></ion-icon></a>
-        </div>        
+          <div class="project_modal_btnContainer">
+            <button class="project_modal_close">닫기</button>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 
 
   <footer id="contact"></footer>
+
+  <script src="scroll.js"></script>
   <script src="letterAnimation.js"></script>
   <script src='dot.js'></script>
   <script src='modal.js'></script>
