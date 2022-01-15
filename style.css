@@ -8,9 +8,11 @@ body{
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-h1, h2{
+h1, h2, h3, h4, h5, h6{
   margin: 0;
 }
 
@@ -223,16 +225,6 @@ section{
   opacity: 1;
 }
 
-.cover{
-  display: none;
-  position: fixed;
-  content: '';
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-  background: rgba(0,0,0,0.5);;
-}
-
 #projects .project_modal{
   position: fixed;
   display: none;
@@ -250,14 +242,14 @@ section{
   width: 70%;
   padding: 2em;
   position: fixed;
-  z-index: 11;
+  z-index: 1000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%)
 }
 
 #projects .project_modal.active .project_modal_container{
-  display: block;
+  display: block; 
 }
 
 #projects .project_modal.active{
@@ -293,5 +285,99 @@ section{
 #projects .project_modal .project_modal_close:hover{
   background-color: white;
   color: black;
+}
+
+#contact{  
+  width: 100%;
+  background-color: #272a2f;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#contact .container{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#contact .container .container_header{
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  margin-bottom: 5px;
+  color: #bec7d5;
+}
+
+#contact .container .container_header .confirmation{
+  color: #aec6ff;
+  font-weight: bolder;
+}
+
+#contact .email-box{
+  cursor: text;
+  padding: 10px 25px;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: space-between;
+  background-color: #363e49;
+  border-radius: 10px;
+  width: 400px;
+  color: white;
+}
+
+#contact .email-box .email{
+  line-height: 1.7em;
+}
+
+#contact .email-box:hover .email{
+  background-color: #5f7696;
+}
+
+#contact .email-box .email-box_copy{
+  color: white;
+  padding: 0.2em;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+#contact .copyright{
+  color: #bec7d5;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+}
+
+#contact .contact_link{
+  display: flex;
+}
+
+#contact .contact_link .link-tistory, .link-github{
+  width: 40px;
+  height: 40px;
+  margin: 1rem;
+  color: white;
+}
+
+ion-icon{
+  width: 100%;
+  height: 100%;
+}
+
+#contact .contact_link .link-tistory circle{
+  fill: white;
+}
+
+#contact .contact_link .link-tistory:hover circle{
+  fill:rgb(161, 161, 161);
+}
+
+#contact .contact_link .link-github:hover{
+  color:rgb(161, 161, 161);
 }
 
