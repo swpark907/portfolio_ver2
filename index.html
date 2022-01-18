@@ -8,17 +8,21 @@
   <title>Seungwoo Park</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="galaxy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <nav class="nav">
-      <div class="nav-title" data-link="#home">PARK SEUNG WOO</div>
-      <ul class="section-lists">
-        <li class="section-list" data-link="#home">HOME</li>
-        <li class="section-list" data-link="#about">ABOUT</li>
-        <li class="section-list" data-link="#projects">PROJECTS</li>
-        <li class="section-list" data-link="#contact">CONTACT</li>
-      </ul>
+    <div class="nav-title" data-link="#home">PARK SEUNG WOO</div>
+    <ul class="section-lists">
+      <li class="section-list" data-link="#home">HOME</li>
+      <li class="section-list" data-link="#about">ABOUT</li>
+      <li class="section-list" data-link="#projects">PROJECTS</li>
+      <li class="section-list" data-link="#contact">CONTACT</li>
+    </ul>
   </nav>
 
   <div class="dot-container">
@@ -38,11 +42,43 @@
     </ul>
   </div>
 
+  <div class="galaxy">
+    <div class="sky"></div>
+    <span class="moon"></span>
+  </div>
+
   <div class="container">
+
     <section id="home">
-      <div class="galaxy">
-        <div class="sky"></div>
-        <span class="moon"></span>
+
+
+      <div class="hero">
+        <h1>WELCOME,</h1>
+        <h1>MY NAME IS PARK SEUNG WOO</h1>
+      </div>
+      <div class="home__bottom">
+        <div class="home__introduction">
+          <h2>안녕하세요!<br> 신입 Frontend 개발자를 꿈꾸는 박승우입니다.</h2>
+          <h3>긴 방황 끝에 현재는 개발에 푹 빠져있습니다.</h3>
+          <h3>꾸준함의 중요성을 알기에 1일 1커밋, 블로그를 운영하고 있습니다.</h3>
+          <h3>아름답고 신기한 UI에 관심이 많아</h3>
+          <h3>Codepen, 유튜브 보고 따라 만들어 보는 것을 즐겨합니다.</h3>
+        </div>
+        <div class="home__contact">
+          <h1>CONTACT</h1>
+          <dl>
+            <dd>swpark907@gmail.com</dd>
+            <dt>E-mail</dt>
+          </dl>
+          <dl>
+            <dd><a href="https://github.com/swpark907" target='_blank'>https://github.com/swpark907</a></dd>
+            <dt>Github</dt>
+          </dl>
+          <dl>
+            <dd><a href="https://mwangmoong.tistory.com/">https://mwangmoong.tistory.com/</a></dd>
+            <dt>Blog</dt>
+          </dl>
+        </div>
       </div>
     </section>
 
@@ -50,48 +86,103 @@
 
     <section id="about">
       <div class="section-left">
-        <h1 class="title word" id="about-title">ABOUT</h1>
-        <h2 class="subtitle">Park Seung woo</h2>
+        <div class="title_container">
+          <h1 class="title word" id="about-title">ABOUT</h1>
+          <h2 class="subtitle">Park Seung woo</h2>
+        </div>
       </div>
-      <div class="section-right"></div>
+      <div class="section-right">
+        <dl>
+          <dt class="skills-title">SKILLS</dt>
+          <dl>
+            <dt class="skills-sub">Familiar</dt>
+            <div class="skills__list">
+              <dd>HTML5</dd>
+              <dd>CSS3</dd>
+              <dd>SCSS</dd>
+              <dd>VanilaJS</dd>
+              <dd>REACT</dd>
+            </div>
+          </dl>
+          <dl>
+            <dt class="skills-sub">Learning</dt>
+            <div class="skills__list">
+              <dd>Material-UI</dd>
+              <dd>PostCSS</dd>
+              <dd>Tailwind CSS</dd>
+              <dd>Node.js, MongoDB</dd>              
+            </div>
+          </dl>
+          <dl>
+            <dt class="skills-sub">Version Control</dt>
+            <div class="skills__list">
+              <dd>Git</dd>
+              <dd>Github</dd>
+              <dd>Github Desktop</dd>
+              <dd>SourceTree</dd>              
+            </div>
+          </dl>
+        </dl>
+
+        <dl>
+          <dt class="skills-title">CERTIFICATE</dt>
+          <dd style="text-align: end; transform: translateY(2.1em); font-weight: var(--fw--bolder);">DreamCoding</dd>
+          <dd>Browser 101(VanilaJs)</dd>
+          <dd>REACT 과정</dd>
+          <dd>TypeScript + 객체지향 마스터 과정</dd>
+          <dd style="text-align: end; transform: translateY(2.1em); font-weight: var(--fw--bolder);">Coding Apple</dd>
+          <dd>REACT 과정</dd>
+          <dd>Nodejs, MongoDB 과정</dd>
+          <dd>수료</dd>
+        </dl>
+        <dl>
+          <dt class="skills-title">EDUCATION</dt>
+          <dd>한양대학교ERICA 건축학부 건축공학전공</dd>
+        </dl>
+      </div>
     </section>
 
 
     <section id="projects">
       <div class="section-left">
-        <h1 class="title word" id="projects-title">PROJECTS</h1>
+        <div class="title_container">
+          <h1 class="title word" id="projects-title">PROJECTS</h1>
+        </div>
+
       </div>
       <div class="section-right">
         <ul class="items">
-          <li class="item">
+          <li class="item" data-num='1'>
             <span class="project_number">1</span>
           </li>
-          <li class="item">
+          <li class="item" data-num='2'>
             <span class="project_number">2</span>
           </li>
-          <li class="item">
+          <li class="item" data-num='3'>
             <span class="project_number">3</span>
           </li>
-          <li class="item">
+          <li class="item" data-num='4'>
             <span class="project_number">4</span>
           </li>
         </ul>
         <div class="project_preview">
-          <img src="" alt="project_preview">
+          <img src="img/냉장고털기2.png" alt="project_preview">
           <button class="more">자세히 보기</button>
         </div>
       </div>
 
       <div class="project_modal">
         <div class="project_modal_container">
-          <img class="project_modal_thumbnail" src="" alt="">
+          <img class="project_modal_thumbnail" src="img/냉장고털기2.png" alt="project_thumbnail">
           <h2 class="project_modal_title">프로젝트 제목(제목 직접)</h2>
           <h3>개요</h3>
           <p class="project_modal_outline">...</p>
           <h3>사용기술</h3>
           <p class="project_modal_skills">...</p>
           <h3>코드 (Github)</h3>
-          <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+          <a href="#">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
           <div class="project_modal_btnContainer">
             <button class="project_modal_close">닫기</button>
           </div>
@@ -108,28 +199,40 @@
         <span class="confirmation">Copied</span>
       </div>
       <div class="email-box">
-        <span class="email">swpark907@naver.com</span>
+        <span class="email">swpark907@gmail.com</span>
         <span class='email-box_copy'>COPY!</span>
       </div>
       <div class="contact_link">
-        <a class="link-github" href="https://github.com/swpark907"><ion-icon name="logo-github"></ion-icon></a>
-        <a class="link-tistory" href="https://mwangmoong.tistory.com/">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408.4 408.4"><g><circle class="cls-1" cx="58.18" cy="58.18" r="58.18"/><circle class="cls-1" cx="204.2" cy="58.18" r="58.18"/><circle class="cls-1" cx="204.2" cy="204.2" r="58.18"/><circle class="cls-1" cx="204.2" cy="350.22" r="58.18"/><circle class="cls-1" cx="350.22" cy="58.18" r="58.18"/></g></svg>
+        <a class="link-github" href="https://github.com/swpark907" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a class="link-tistory" href="https://mwangmoong.tistory.com/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408.4 408.4">
+            <g>
+              <circle class="cls-1" cx="58.18" cy="58.18" r="58.18" />
+              <circle class="cls-1" cx="204.2" cy="58.18" r="58.18" />
+              <circle class="cls-1" cx="204.2" cy="204.2" r="58.18" />
+              <circle class="cls-1" cx="204.2" cy="350.22" r="58.18" />
+              <circle class="cls-1" cx="350.22" cy="58.18" r="58.18" />
+            </g>
+          </svg>
+        </a>
+        <a class="link-codepen" href="https://codepen.io/swpark907" target="_blank">
+          <ion-icon name="logo-codepen">asdfdasfads</ion-icon>
         </a>
       </div>
       <span class="copyright">Copyrightⓒ 2022 All rights reserved by PSW</span>
     </div>
-    
-    
+
+
 
   </section>
-  <script src="galaxy.js"></script>
-  <script src="scroll.js"></script>
-  <script src="letterAnimation.js"></script>
-  <script src='dot.js'></script>
-  <script src='modal.js'></script>
+  <script src="src/galaxy.js"></script>
+  <script src="src/scroll.js"></script>
+  <script src="src/letterAnimation.js"></script>
+  <script src="src/modal.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
