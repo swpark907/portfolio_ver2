@@ -5,6 +5,8 @@ let currentWord = 0;
 
 let titleLetters = []
 
+// 클래스명 시간차 추가를 통한 애니메이션 구현
+
 const splitLetters = (word) => {
   const content = word.innerHTML;
   word.innerHTML = '';
@@ -27,12 +29,14 @@ const displayLetters = (arr) => {
 const addClassname = (arr, i) => {
   setTimeout(() => {    
     arr[i].classList.add('on')
-  }, 350+(i*80))
+  }, 100+(i*50))
 }
 
 for(let i = 0; i < words.length; i++){
   splitLetters(words[i]);
 }
+
+// 화면에 나타나면 애니메이션 실행
 
 window.addEventListener('scroll', (e) => {
   
@@ -41,10 +45,19 @@ window.addEventListener('scroll', (e) => {
     if(top < 900 && top > 0){
       const spans = words[i].querySelectorAll('span');
       const letters = [];
+      const project = document.querySelector('#projects');
+      const right = project.querySelector('.section-right')
+      const left = project.querySelector('.section-left');
       spans.forEach((span) => {
         letters.push(span);
       })
       displayLetters(letters);
+      if(i === 1){
+        right.classList.add('on');
+      }
+      
     }
   }
 })
+
+
