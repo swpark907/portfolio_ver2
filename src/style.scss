@@ -886,7 +886,7 @@ dd {
     }
     .home__bottom {
       display: block;
-      padding: 1em;
+      padding: 3em;
       .home__introduction {
         h2 {
           font-size: var(--f--smaller);
@@ -919,7 +919,7 @@ dd {
       display: none;
     }
     .section-right {
-      padding: 3rem 1rem;
+      padding: 3rem;
       background-color: transparent;
       backdrop-filter: none;
 
@@ -952,14 +952,19 @@ dd {
         width: 100%;
 
         .case{
+          position: static;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           background: none;
           margin: 0;
           width: 100%;
-          height: 100%;
-          transform: translateY(30px);
+          height: 100%;          
 
           img{
-            top: 50px;
+            position: static;
+            top: 8px;
+            left: 14px;
             height: 75%;
           }
         }

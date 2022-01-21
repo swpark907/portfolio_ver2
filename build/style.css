@@ -608,7 +608,7 @@ dd {
     display: none; }
   #home .home__bottom {
     display: block;
-    padding: 1em; }
+    padding: 3em; }
     #home .home__bottom .home__introduction {
       margin-bottom: 3rem; }
       #home .home__bottom .home__introduction h2 {
@@ -626,7 +626,7 @@ dd {
   #about .section-left {
     display: none; }
   #about .section-right {
-    padding: 3rem 1rem;
+    padding: 3rem;
     background-color: transparent;
     backdrop-filter: none; }
     #about .section-right dl dt,
@@ -647,14 +647,19 @@ dd {
       width: 100%; }
       #projects .project__left-first .section-left .case,
       #projects .project__right-first .section-left .case {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: none;
         margin: 0;
         width: 100%;
-        height: 100%;
-        transform: translateY(30px); }
+        height: 100%; }
         #projects .project__left-first .section-left .case img,
         #projects .project__right-first .section-left .case img {
-          top: 50px;
+          position: static;
+          top: 8px;
+          left: 14px;
           height: 75%; }
     #projects .project__left-first .section-right,
     #projects .project__right-first .section-right {
