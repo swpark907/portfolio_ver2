@@ -3,7 +3,8 @@
 const nav = document.querySelector('.nav');
 const navTitle = document.querySelector('.nav-title')
 const aboutTitle = document.querySelector('#about-title');
-const projectsTitle = document.querySelector('#projects-title');
+const projectsSec = document.querySelector('#projects')
+const projectsTitleCon = projectsSec.querySelector('.title_container');
 const dots = document.querySelector('.dots');
 const dot = document.querySelectorAll('.dot')
 const dotName = document.querySelectorAll('.dot-name')
@@ -43,8 +44,9 @@ function scrollToTarget(element) {
 
 window.addEventListener('scroll', (e) => {
   for(let i = 0; i < section.length; i++){
-    const top = section[i].getBoundingClientRect().top;
-    if(top < 800 && top > -500){
+    const top = window.pageYOffset + section[i].getBoundingClientRect().top;
+    const bottom = window.pageYOffset + section[i].getBoundingClientRect().bottom;
+    if(window.pageYOffset + window.innerHeight > top){
       dot.forEach(d => {
         d.classList.remove('active');
         if(section[i] === document.querySelector(`${d.dataset.link}`)){
@@ -55,3 +57,11 @@ window.addEventListener('scroll', (e) => {
   }
 })
 
+// 
+
+window.addEventListener('scroll', e => {
+  const top = window.pageYOffset + projectsTitleCon.getBoundingClientRect().top;
+  if(window.pageYOffset + window.innerHeight > top){
+    projectsTitleCon.classList.add('on');
+  }
+})

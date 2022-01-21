@@ -41,21 +41,14 @@ for(let i = 0; i < words.length; i++){
 window.addEventListener('scroll', (e) => {
   
   for(let i = 0; i < words.length; i++){
-    const top = words[i].getBoundingClientRect().top ;
-    if(top < 900 && top > 0){
+    const top = window.pageYOffset + words[i].getBoundingClientRect().top ;
+    if(window.pageYOffset + window.innerHeight > top){
       const spans = words[i].querySelectorAll('span');
       const letters = [];
-      const project = document.querySelector('#projects');
-      const right = project.querySelector('.section-right')
-      const left = project.querySelector('.section-left');
       spans.forEach((span) => {
         letters.push(span);
       })
-      displayLetters(letters);
-      if(i === 1){
-        right.classList.add('on');
-      }
-      
+      displayLetters(letters);      
     }
   }
 })

@@ -2,9 +2,7 @@
 
 const itemsBox = document.querySelector(".items");
 const items = document.querySelectorAll(".item");
-const moreProject = document.querySelector(".more");
 const cover = document.querySelector(".cover");
-const projectPreview = document.querySelector('.project_preview')
 const projectModal = document.querySelector(".project_modal");
 const projectThumb = document.querySelector('.project_modal_thumbnail');
 const projectModalTitle = document.querySelector(".project_modal_title");
@@ -41,7 +39,7 @@ const projects = {
       title: "Card Maker",
       imgSrc: "",
       outline: "4번 개요",
-      skills: ["HTML", "CSS", "REACT", "PostCSS", "Firebase"],
+      skills: ["HTML", "CSS", "REACT", "PostCSS", "Firebase Auth", "Cloudinary"],
       link: "",
     },
   ],
@@ -52,9 +50,7 @@ items.forEach((item) => {
     const itemNum = e.currentTarget.dataset.num;
     currentProjectIndex = itemNum - 1;
     const content = projects.project[currentProjectIndex];
-    const projectImg = projectPreview.querySelector('img')    
 
-    projectImg.src = content.imgSrc;
     projectThumb.src = content.imgSrc;
     projectModalTitle.innerHTML = content.title;
     projectModalOutline.innerHTML = content.outline;
@@ -78,7 +74,5 @@ function modalClose() {
       : false;
   });
 }
-
-moreProject.onclick = showModal;
 
 
