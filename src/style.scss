@@ -618,8 +618,21 @@ dd {
     }
   }
 
-  .project__left-first {
+  .project{
     display: flex;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  .project.on{
+    transform: none;
+    opacity: 1;
+  }
+
+  .project__left-first {
+    
     text-align: end;
 
     .section-right{
@@ -628,7 +641,7 @@ dd {
   }
 
   .project__right-first {
-    display: flex;
+    
     text-align: start;
     flex-direction: row-reverse;
 

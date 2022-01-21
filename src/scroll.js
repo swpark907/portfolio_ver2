@@ -10,6 +10,7 @@ const dot = document.querySelectorAll('.dot')
 const dotName = document.querySelectorAll('.dot-name')
 const section = document.querySelectorAll('section');
 const sectionList = document.querySelectorAll('.section-list')
+const project = document.querySelectorAll('.project');
 
 // Navbar animation
 
@@ -53,6 +54,13 @@ window.addEventListener('scroll', (e) => {
           d.classList.add('active');
         }
       })
+    }
+  }
+
+  for(let i = 0; i< project.length; i++){
+    const top = window.pageYOffset + project[i].getBoundingClientRect().top;
+    if(window.pageYOffset + window.innerHeight > top + 600){
+      project[i].classList.add('on');
     }
   }
 })
