@@ -759,6 +759,11 @@ dd {
       .confirmation {
         color: #aec6ff;
         font-weight: bolder;
+        opacity: 0;
+        transition: all 300ms;
+        &.on{
+          opacity: 1;
+        }
       }
     }
   }
@@ -784,7 +789,7 @@ dd {
       height: 100%;
       background-color: transparent;
       outline: none;
-      border: none;
+      border: none;  
     }
 
     &:hover {
