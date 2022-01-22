@@ -168,9 +168,7 @@ dd {
     padding: 0.6em; }
   .nav .section-lists {
     display: flex;
-    justify-content: space-between;
-    max-height: 0px;
-    overflow: hidden; }
+    justify-content: space-between; }
     .nav .section-lists .section-list {
       cursor: pointer;
       border-radius: 10px;
@@ -564,7 +562,9 @@ dd {
     justify-content: center; }
     .nav .section-lists {
       display: block;
-      transition: 500ms; }
+      transition: 500ms;
+      overflow: hidden;
+      max-height: 0px; }
       .nav .section-lists .section-list {
         text-align: center; }
       .nav .section-lists.on {

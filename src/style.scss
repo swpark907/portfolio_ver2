@@ -247,8 +247,8 @@ dd {
   .section-lists {
     display: flex;
     justify-content: space-between;
-    max-height: 0px;
-    overflow: hidden;
+    
+    
 
     .section-list {
       cursor: pointer;
@@ -814,6 +814,8 @@ dd {
     .section-lists{
       display: block;
       transition: 500ms;
+      overflow: hidden;
+      max-height: 0px;
 
       .section-list{
         text-align: center;
