@@ -55,6 +55,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
 
   &.on {
     color: var(--color--black);
@@ -154,6 +155,10 @@ a:hover {
         }
       }
     }
+
+    .moon {
+      color: white;   
+    }
   }
 
   .moon {
@@ -166,13 +171,23 @@ a:hover {
     border-radius: 50%;
     z-index: 5;
     background: rgb(253, 248, 221);
-    filter: blur(1px);
     box-shadow: 0px 0px 5px 5px rgba(253, 248, 221, 0.5);
     transition: 250ms;
     cursor: pointer;
 
     &:hover {
       transform: scale(1.05);
+    }
+
+    &::before{
+      position: absolute;
+      content: '분위기 바꾸기';
+      top: 30px;
+      right: 110px;
+      width: 150px;
+      height: 1px;
+      background-color: white;
+      filter: none;
     }
   }
 }
@@ -544,6 +559,7 @@ dd {
       }
       .skills-sub {
         font-size: var(--f--normal);
+        color: var(--color--light-pink);
         margin-bottom: 1rem;
       }
       .skills__list {
@@ -925,14 +941,24 @@ dd {
         dl {
           display: flex;
           flex-wrap: nowrap;
+
+          .skills-sub{
+            font-size: var(--f--smaller);
+            margin-bottom: 0.5rem;;
+          }
+
+          .skills__list{
+            font-size: var(--f--small);
+          }
+
           .skills-sub,
           .skills__list {
             width: 100%;
             transform: none;
             // text-align: start;
             // margin-left: 1em;
-            font-size: var(--f--small);
-            margin: 0;
+            
+            // margin: 0;
             display: flex;
             justify-content: flex-start;
             flex-wrap: nowrap;
@@ -946,7 +972,7 @@ dd {
         .division-title {
           text-align: start;
           margin-bottom: 1em;
-          font-size: var(--f--smaller);
+          font-size: var(--f--normal);
           width: 80%;
           margin: 0;
 

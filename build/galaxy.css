@@ -37,6 +37,11 @@
     cursor: pointer; }
     .galaxy .moon:hover {
       transform: scale(1.05); }
+  .galaxy::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background-color: white; }
 
 i {
   position: absolute;

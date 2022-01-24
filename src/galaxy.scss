@@ -49,6 +49,13 @@
       transform: scale(1.05);
     }
   }
+
+  &::before{
+    content: '';
+    width: 30px;
+    height: 1px;
+    background-color: white;
+  }
 }
 
 
